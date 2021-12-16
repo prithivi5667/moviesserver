@@ -32,7 +32,7 @@ app.use(cors(corsOptions))
 
 //app.set('view engine', 'ejs');
 app.use(cors({
-    origin: "https://nowmoviespt.erokuapp.com/", // restrict calls to those this address
+    origin: "https://moviesclient.netlify.app", // restrict calls to those this address
     credentials: true,
 }));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -158,11 +158,11 @@ router.get('/logout', function(req, res){
 
 app.use('/api', router);
 
-app.use(express.static(path.join(__dirname, "/client/build")));
+// app.use(express.static(path.join(__dirname, "/client/build")));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
+// });
 
 app.listen(3001);
 console.log("Listening to port 3001\n");
