@@ -7,8 +7,6 @@
     "client-install": "npm install --prefix client",
     "start": "node server.js",
     "server": "node server.js",
-    "client": "cd ../ && npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "author": "",
@@ -16,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
+    "debug": "^2.6.9",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",

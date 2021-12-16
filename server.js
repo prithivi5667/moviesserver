@@ -164,5 +164,5 @@ app.use('/api', router);
 //   res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 // });
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
 console.log("Listening to port 3001\n");
